@@ -6,21 +6,21 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 .wrapper {
-	width: 1170px;
+	width: 1180px;
 	margin: auto;
 }
 header {
-	height: 100vh;
-	-webkit-background-size: cover;
-	background-size: cover;
-	background-position: center center;
-	position: relative;
+	height: 220vh;
+	position: static;
 }
 .nav-area {
 	right: 0;
 	list-style: none;
+	top: 0px;
 	margin-top: 30px;
 	position: fixed;
+	float: right;
+	float: top;
 }
 .nav-area li {
 	display: inline-block;
@@ -49,10 +49,10 @@ header {
 
 
 .welcome-text {
-	position: absolute;
+	position: relative;
 	width: 600px;
 	height: 300px;
-	margin: 20% 30%;
+	margin: 15% 30%;
 	text-align: center;
 	color: white;
 }
@@ -99,7 +99,7 @@ header {
 	}
 }
 
-
+/*background gradience animation*/
 body{
   font-family: "montserrat";
   background-image: linear-gradient(125deg,Black,#494949);  background-size: 400%;
@@ -116,4 +116,20 @@ body{
   100%{
     background-position: 0% 50%;
   }
+}
+
+* {box-sizing: border-box;}
+
+.img-magnifier-container {
+  position: relative;
+}
+
+.img-magnifier-glass {
+  position: absolute;
+  border: 3px solid #000;
+  border-radius: 50%;
+  cursor: none;
+  /*Set the size of the magnifier glass:*/
+  width: 60px;
+  height: 60px;
 }
