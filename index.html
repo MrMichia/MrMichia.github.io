@@ -4,15 +4,74 @@
     <meta charset="UTF-8">
     <title>Adam Michia</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">    
+    <link rel="stylesheet" href="style.css">   
+    
+    <script>
+function magnify(imgID, zoom) {
+  var img, glass, w, h, bw;
+  img = document.getElementById(imgID);
+  /*create magnifier glass:*/
+  glass = document.createElement("DIV");
+  glass.setAttribute("class", "img-magnifier-glass");
+  /*insert magnifier glass:*/
+  img.parentElement.insertBefore(glass, img);
+  /*set background properties for the magnifier glass:*/
+  glass.style.backgroundImage = "url('" + img.src + "')";
+  glass.style.backgroundRepeat = "no-repeat";
+  glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
+  bw = 3;
+  w = glass.offsetWidth / 2;
+  h = glass.offsetHeight / 2;
+  /*execute a function when someone moves the magnifier glass over the image:*/
+  glass.addEventListener("mousemove", moveMagnifier);
+  img.addEventListener("mousemove", moveMagnifier);
+  /*and also for touch screens:*/
+  glass.addEventListener("touchmove", moveMagnifier);
+  img.addEventListener("touchmove", moveMagnifier);
+  function moveMagnifier(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    x = pos.x;
+    y = pos.y;
+    /*prevent the magnifier glass from being positioned outside the image:*/
+    if (x > img.width - (w / zoom)) {x = img.width - (w / zoom);}
+    if (x < w / zoom) {x = w / zoom;}
+    if (y > img.height - (h / zoom)) {y = img.height - (h / zoom);}
+    if (y < h / zoom) {y = h / zoom;}
+    /*set the position of the magnifier glass:*/
+    glass.style.left = (x - w) + "px";
+    glass.style.top = (y - h) + "px";
+    /*display what the magnifier glass "sees":*/
+    glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+    
 </head>
 
 <body>
     <header>
-    <div class="wrapper">
-        <div class="logo">
-            <img src="https://i.ibb.co/0nnvzhY/Logo.png" alt="Logo" width="100px" height="100px" padding="25px">
-        </div>
+        <div class="wrapper">
+    
+            <div class="img-magnifier-container">
+              <img id="myimage" src="https://i.ibb.co/0nnvzhY/Logo.png" width="150px" height="150px">
+             
 <ul class="nav-area">
     <li><a href= "index.html">Home</a></li>
     <li><a href= "experience.html">Experience</a></li>
@@ -24,6 +83,11 @@
 
 <div class="welcome-text">
         <img src="https://i.ibb.co/gV47Vkz/Cropped-CCI-Headshot-Spring-2021-1122.png" alt="Headshot" height="350px" width="350px">
+        
+        <br>
+        <br>
+        <br>
+        
         <h1>Adam Michia</h1>
         <h2>agm18r@my.fsu.edu</h2>
 <hr width="100%" color="white"> 
@@ -51,12 +115,12 @@
 <a href="https://www.linkedin.com/in/adam-michia/" target="_blank" height="80px" width="80px">
   <img src="https://i.ibb.co/CVHxHc8/4s7o394bbr4n1s9l76fjcvgdrr-87d11ef910d816d94dd87da0f9ce0d53.png" height="80px" width="80px">
   
-<a href="https://github.com/MrMichia" target="_blank" height="80px" width="80px">
-  <img src="https://i.ibb.co/StXK0D7/github-pages-logo-repository-fork-github-86eddab19cbc3ae293ada0fe0fb9e27d.png" height="60px" width="60px" style="padding-bottom: 12.5px;">
+<a href="https://github.com/MrMichia" target="_blank" height="70px" width="60px">
+  <img src="https://i.ibb.co/StXK0D7/github-pages-logo-repository-fork-github-86eddab19cbc3ae293ada0fe0fb9e27d.png" height="70px" width="60px" style="padding-bottom: 12.5px;">
 </a>
 
-<a href="https://discordapp.com/channels/@me/MrMichia#0570/" target="_blank" height="80px" width="80px">
-  <img src="https://i.ibb.co/djxkzq3/discord-computer-icons-logo-computer-software-avatar-5dcd8a759521fd6bde97d48d4d0e161f.png" height="80px" width="80px" style="padding-left: 5px;">
+<a href="https://discordapp.com/channels/@me/MrMichia#0570/" target="_blank" height="70px" width="70px">
+  <img src="https://i.ibb.co/djxkzq3/discord-computer-icons-logo-computer-software-avatar-5dcd8a759521fd6bde97d48d4d0e161f.png" height="70px" width="70px" style="padding-left: 5px; padding-bottom: 8px;">
 </a>
 
 <a href="mailto:agm18r@my.fsu.edu" target="_blank" height="80px" width="80px">
@@ -67,4 +131,9 @@
 </header>
 
 </body>
+<script>
+/* Initiate Magnify Function
+with the id of the image, and the strength of the magnifier glass:*/
+magnify("myimage", 2);
+</script>
 </html>
