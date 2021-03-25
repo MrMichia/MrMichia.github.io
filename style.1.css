@@ -69,7 +69,7 @@
 }
 
 .left{
-	background: #292b2f;
+	background: #2b2b2b;
 	width: 250px;
 	padding: 0 20px;
 }
@@ -98,6 +98,18 @@
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	padding-bottom: 10px;
+	color: lightblue;
+	position: relative;
+	text-align: right;
+	margin-bottom: 15px;
+}
+
+.resume_title{
+	font-size: 24px;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	padding-bottom: 10px;
 	color: #3525af;
 	position: relative;
 	text-align: right;
@@ -105,6 +117,15 @@
 }
 
 .title:before{
+	content: "";
+	position: absolute;
+	top: 35px;
+	right: 0;
+	width: 50px;
+	height: 3px;
+	background: #3525af;
+}
+.resume_title:before{
 	content: "";
 	position: absolute;
 	top: 35px;
@@ -206,7 +227,7 @@
 	font-size: 52px;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: #3525af;
+	color: lightblue;
 }
 
 .header .role{
@@ -245,6 +266,13 @@
 }
 
 .right_inner .li_wrap .info_title{
+	text-transform: uppercase;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: #9153c9;
+}
+
+.right_inner .li_wrap .info_resume_title{
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 2px;
