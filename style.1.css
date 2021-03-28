@@ -234,11 +234,12 @@
 }
 
 .header .name{
-	font-size: 52px;
+	font-size: 40px;
 	text-transform: uppercase;
 	font-weight: 700;
 	color: lightblue;
 }
+
 
 .header .role{
 	font-weight: 300;
