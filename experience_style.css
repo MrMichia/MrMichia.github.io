@@ -5,7 +5,6 @@
 	padding: 0;
 	list-style: none;
 	box-sizing: border-box;
-	font-family: 'Ubuntu', sans-serif;
 }
 
 .welcome-text {
@@ -14,58 +13,178 @@
 	text-align: left;
 	visibility: hidden;
 	font-size: 30px;
+	color: white;
 }
+		
+/*Header & Footer Section*/
+		/*===== GOOGLE FONTS =====*/
+		@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+		/*===== VARIABLES CSS =====*/
+		:root{
+		  --header-height: 3rem;
+		  --font-semi: 600;
+		}
+		
+		/*===== Colors =====*/
+		:root{
+		  --first-color: #4070F4;
+		  --second-color: white;
+		}
+		
+		/*===== Margins =====*/
+		:root{
+		  --mb-1: 0.5rem;
+  		  --mb-2: 1rem;
+  		  --mb-3: 1.5rem;
+  		  --mb-4: 2rem;
+  		  --mb-5: 2.5rem;
+  		  --mb-6: 3rem;
+		}
+		
+		ul{
+		  margin: 0;
+		  padding: 0;
+		  list-style: none;
+		}
+		a{
+		  text-decoration: none;
+		}
+		
+		
+		/*===== LAYOUT =====*/
+		.bd-grid{
+		  max-width: 100%;
+		  display: grid;
+		  grid-template-columns: 100%;
+		  grid-column-gap: 2rem;
+		  padding-left: 5%;
+		  padding-right: 5%;
+		}
+		.l-header{
+		  width: 100%;
+		  position: fixed;
+		  top: 0;
+		  left: 0;
+		  z-index: 100;
+		  box-shadow: 0 1px 4px rgba(146,161,176,.15);
+		}
+		
+		/*===== NAV =====*/
+		.nav{
+		  height: var(--header-height);
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  font-weight: var(--font-semi);
+		  background-color: #2b2b2b;
+		}
+		@media screen and (max-width: 768px){
+		  .nav__menu{
+		    position: fixed;
+		    top: var(--header-height);
+		    right: -100%;
+		    width: 40%;
+		    height: 100%;
+		    padding: 2rem;
+		    transition: .5s;
+		    background-color: #2b2b2b;
+		  }
+		}
+		.nav__item{
+		  margin-bottom: var(--mb-4);
+		}
+		.nav__link{
+		  position: relative;
+		  color: #fff;
+		}
+		.nav__link:hover{
+		  position: relative;
+		}
+		.nav__link:hover::after{
+		  position: absolute;
+		  content: "";
+		  width: 100%;
+		  height: 0.18rem;
+		  left: 0;
+		  top: 2rem;
+		  background-color: var(--first-color);
+		}
+		.nav__logo{
+		  color: var(--second-color);
+		}
+		.nav__toggle{
+		  color: var(--second-color);
+		  font-size: 1.5rem;
+		  cursor: pointer;
+		}
+		
+		/*Active menu*/
+		.active::after{
+		  position: absolute;
+		  content: "";
+		  width: 100%;
+		  height: 0.18rem;
+		  left: 0;
+		  top: 2rem;
+		  background-color: var(--first-color);
+		}
+		
+		/*=== Show menu ===*/
+		.show{
+		  right: 0;
+		}
+		
+		/* ===== FOOTER =====*/
+		.footer{
+		  text-align: center;
+		  font-weight: var(--font-semi);
+		  padding: 2rem 0;
+		  color: white;
+		}
+		.footer__title{
+		  font-size: 2rem;
+		  margin-bottom: var(--mb-4);
+		}
+		.footer__social{
+		  margin-bottom: var(--mb-4);
+		}
+		.footer__icon{
+		  font-size: 1.5rem;
+		  color: #fff;
+		  margin: 0 var(--mb-2)
+		}
+		
+		/* ===== MEDIA QUERIES=====*/
+		@media screen and (min-width: 768px){
+		  .nav{
+		    height: calc(var(--header-height) + 1rem);
+		    background-color: #2b2b2b;
+		  }
+		  .nav__list{
+		    display: flex;
+		    padding-top: 0;
+		  }
+		  .nav__item{
+		    margin-left: var(--mb-6);
+		    margin-bottom: 0;
+		  }
+		  .nav__toggle{
+		    display: none;
+		  }
+		  .nav__link{
+		    color: var(--second-color);
+		  }
+		}
+		
+		@media screen and (min-width: 1024px){
+		  .bd-grid{
+		    margin-left: auto;
+		    margin-right: auto;
+		  }
+		}
 
-.topnav {
-	overflow: hidden;
-}
 
-.topnav a {
-	float: right;
-	display: block;
-	color: #f2f2f2;
-	text-align: center;
-	padding: 14px 16px;
-	text-decoration: none;
-	font-size: 17px;
-}
 
-.topnav a:hover {
-	background-color: #ddd;
-	color: black;
-}
-
-.topnav a.active {
-	background-color: green;
-	color: black;
-}
-
-.topnav .icon {
-	display: none;
-}
-
-@media screen and (max-width: 750px) {
-         
-	.topnav a:not(:first-child) {
-		display: none;
-	}
-	.topnav a.icon {
-		float: right;
-		display: block;
-	}
-}
-
-@media screen and (max-width: 750px) {
-	.topnav.responsive {
-		position: relative;
-	}
-	.topnav.responsive .icon {}
-	.topnav.responsive a {
-		float: none;
-		display: block;
-		text-align: left;
-	}
-}
 
 
 
@@ -117,7 +236,7 @@
 	text-transform: uppercase;
 	letter-spacing: 5px;
 	padding-bottom: 10px;
-	color: lightblue;
+	color: #4070F4;
 	position: relative;
 	text-align: right;
 	margin-bottom: 15px;
@@ -237,7 +356,7 @@
 	font-size: 40px;
 	text-transform: uppercase;
 	font-weight: 700;
-	color: lightblue;
+	color: #4070F4;
 }
 
 
@@ -337,6 +456,7 @@
 
 @media screen and (max-width: 750px) {
   .welcome-text {   
+  	padding-top: 15%;
     padding-left: 0px;
     visibility: visible;
 	text-align: center;
@@ -356,15 +476,10 @@
 }
 
 
-
-
-
-
-
 /*background gradience animation*/
 
 body {
-	font-family: "montserrat";
+	font-family: 'Ubuntu', sans-serif;
 	background-image: linear-gradient(125deg, Black, #494949);
 	background-size: 400%;
 	animation: bganimation 15s infinite;
@@ -380,25 +495,4 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
-}
-
-
-/* Zoom function */
-
-* {
-	box-sizing: border-box;
-}
-
-.img-magnifier-container {
-	position: relative;
-}
-
-.img-magnifier-glass {
-	position: absolute;
-	border: 3px solid #000;
-	border-radius: 50%;
-	cursor: none;
-	/*Set the size of the magnifier glass:*/
-	width: 60px;
-	height: 60px;
 }
