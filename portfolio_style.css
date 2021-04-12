@@ -289,6 +289,7 @@ h1 {
 .content {
   background-color: white;
   padding: 10px;
+  border-radius: 15px;
 }
 
 /* Responsive layout - makes a two column-layout instead of four columns */
@@ -404,7 +405,4 @@ body {
 }
 
 
-.footer {
-         position: relative;
-         text-align: center;
-}
+
