@@ -12,7 +12,7 @@
         <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
 
         <title>Adam Michia's Website</title>
-    </head>
+</head>
     <body>
         <!--===== HEADER =====-->
         <header class="l-header">
@@ -51,11 +51,9 @@
                     <a href="mailto:agm18r@my.fsu.edu" target="_blank" class="home__social-icon"><i class='bx bx-envelope' ></i></a>
                 </div>
 
-                <!--===== CONTACT
                 <div class="home__img">    
                     <img src="" alt="">
                 </div>
-                =====-->
             </section>
 
             <!--===== ABOUT =====-->
@@ -68,7 +66,7 @@
                     </div>
                     
                     <div>
-                        <h2 class="about__subtitle">Information Technology Student at FSU</h2>
+                        <h2 class="about__subtitle">I am Adam</h2>
                         <p class="about__text">I am interested in getting hands on experience in a technology driven work environment. I have had multiple jobs in the past where customer service was of the highest priority and I feel as if I can provide an effective presence to not only coworkers but to customers as well. I am advancing my skills in web development and database management through my classes at FSU and am actively seeking to expand my knowledge on general technological skills outside of my school work through freelance web/game development and certification persual.</p>           
                     </div>                                   
                 </div>
@@ -169,12 +167,14 @@
                 <h2 class="section-title">Contact</h2>
 
                 <div class="middle__container bd-grid">
-                    <form action="action_page.php" class="contact__form">
-                        <input type="text" placeholder="Name" class="contact__input">
-                        <input type="mail" placeholder="Email" class="contact__input">
-                        <textarea name="" id="" placeholder="Write something..." cols="0" rows="10" class="contact__input"></textarea>
-                        <input type="button" value="Send" class="contact__button button">
+
+                    <form id="contact-form" action="contact-form-handler.php" method="POST" class="contact__form">
+                        <input name="name" type="text" placeholder="Name" class="contact__input" required>
+                        <input name="email" type="email" placeholder="Email" class="contact__input" required>
+                        <textarea name="message" placeholder="Write something..." cols="0" rows="10" class="contact__input" required></textarea>
+                        <input type="submit" value="Send" class="contact__button button">
                     </form>
+
                 </div>
             </section>
         </main>
@@ -192,7 +192,6 @@
                 <a href="https://github.com/MrMichia" target="_blank" class="footer__icon"><i class='bx bxl-github' ></i></a>
                 <a href="mailto:agm18r@my.fsu.edu" target="_blank" class="footer__icon"><i class='bx bx-envelope' ></i></a>
             </div>
-            <p>Copyright 2021 - Adam Michia</p>
         </footer>
 
 
