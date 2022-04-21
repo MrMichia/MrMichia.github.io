@@ -217,7 +217,7 @@ img{
   right: 0;
   bottom: 0;
   width: 295px;
-  bottom: 10%;
+  bottom: 10%; 
 }
 
 /*BUTTONS*/
@@ -470,6 +470,7 @@ img{
     width: 457px;
     top: 15%;
     bottom: 15%;
+    margin-top: 10%;
   }
 
   .about__container, .skills__container{
@@ -496,6 +497,7 @@ img{
   .home__img{
     top: 10%;
     right: 10%;
+    margin-top: 10%;
     bottom: 10%;
   }
 }
