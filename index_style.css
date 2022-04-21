@@ -468,7 +468,8 @@ img{
   }
   .home__img{
     width: 457px;
-    float: bottom;
+    top: 30%;
+    bottom: 15%;
   }
 
   .about__container, .skills__container{
