@@ -414,7 +414,7 @@ img{
 }
 
 /* ===== MEDIA QUERIES=====*/
-@media screen and (min-width: 768px){
+@media screen and (min-width: 790px){
   body{
     margin: 0;
   }
@@ -466,7 +466,7 @@ img{
     margin-right: var(--mb-4);
   }
   .home__img{
-    width: 350px;
+    width: 425px;
     top: 15%;
     bottom: 15%;
   }
@@ -491,9 +491,6 @@ img{
   .bd-grid{
     margin-left: auto;
     margin-right: auto;
-  }
-  .home__img{
-    right: 10%;
   }
 }
 
