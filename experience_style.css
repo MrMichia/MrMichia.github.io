@@ -480,7 +480,7 @@
 
 body {
 	font-family: 'Ubuntu', sans-serif;
-	background-image: linear-gradient(125deg, Black, #494949);
+	background-image: linear-gradient(125deg, Black, #898989);
 	background-size: 400%;
 	animation: bganimation 15s infinite;
 }
