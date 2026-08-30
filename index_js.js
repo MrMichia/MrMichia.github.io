@@ -41,12 +41,6 @@ if (!reduceMotion && typeof ScrollReveal !== 'undefined') {
         viewOffset: { top: 24, right: 0, bottom: 24, left: 0 }
     });
 
-    /*SCROLL HOME*/
-    sr.reveal('.home__title');
-    sr.reveal('.home__actions', { delay: 80 });
-    sr.reveal('.home__social-icon', { interval: 60 });
-    sr.reveal('.home__img', { origin: 'right', delay: 120 });
-
     /*SCROLL ABOUT*/
     sr.reveal('.about__img', { origin: 'left' });
     sr.reveal('.about__subtitle, .about__text, .certification-badge', { interval: 70 });
