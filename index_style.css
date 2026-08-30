@@ -199,6 +199,15 @@ img{
 .home__title-color{
   color: var(--first-color);
 }
+.home__role{
+  font-size: .55em;
+  line-height: 1.35;
+}
+.home__actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
 .home__social{
   display: flex;
   flex-direction: column;
@@ -231,6 +240,43 @@ img{
 .button:hover{
   box-shadow: 0 10px 36px rgba(0,0,0,.15);
 }
+.button--outline{
+  background-color: transparent;
+  border: 2px solid var(--first-color);
+}
+.button--outline:hover{
+  background-color: var(--first-color);
+}
+
+@media screen and (max-width: 789px){
+  .home{
+    height: auto;
+    min-height: calc(100vh - var(--header-height));
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+  }
+  .home__data{
+    position: relative;
+    z-index: 2;
+  }
+  .home__actions{
+    align-items: flex-start;
+  }
+  .home__social{
+    flex-direction: row;
+    gap: var(--mb-4);
+  }
+  .home__social-icon{
+    margin-bottom: 0;
+  }
+  .home__img{
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: min(100%, 320px);
+    justify-self: end;
+  }
+}
 
 /* ===== ABOUT =====*/
 .about__container{
@@ -246,6 +292,32 @@ img{
 .about__img img{
   width: 200px;
   border-radius: .5rem;
+}
+.certification-badge{
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+  margin-top: var(--mb-3);
+  padding: .8rem 1rem;
+  border: 1px solid rgba(64,112,244,.6);
+  border-radius: .5rem;
+  color: var(--second-color);
+  background: rgba(64,112,244,.12);
+  transition: transform .2s ease, background-color .2s ease;
+}
+.certification-badge:hover{
+  transform: translateY(-2px);
+  background: rgba(64,112,244,.22);
+}
+.certification-badge i{
+  flex: 0 0 auto;
+  font-size: 2rem;
+  color: var(--first-color);
+}
+.certification-badge span{
+  display: flex;
+  flex-direction: column;
+  font-size: .85rem;
 }
 
 
@@ -497,7 +569,7 @@ img{
 /*background gradience animation*/
 
 body {
-	font-family: "montserrat";
+  font-family: var(--body-font);
 	background-image: linear-gradient(125deg, Black, #898989);
 	background-size: 400%;
 	animation: bganimation 15s infinite;
@@ -513,4 +585,15 @@ body {
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html{
+    scroll-behavior: auto;
+  }
+  *,::before,::after{
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

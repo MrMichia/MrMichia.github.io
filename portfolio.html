@@ -1,286 +1,234 @@
 <!DOCTYPE html>
-<html>
-   <head>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link rel="stylesheet" href="portfolio_style.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Selected projects and professional certifications from Adam Michia, a Microsoft Exchange Online Support Escalation Engineer.">
+  <title>Portfolio | Adam Michia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="portfolio_style.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="index.html" class="brand" aria-label="Adam Michia home">
+        <span class="brand-mark">AM</span>
+        <span>Adam Michia</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-menu">
+        <i class='bx bx-menu'></i>
+      </button>
+      <div class="nav-menu" id="nav-menu">
+        <a href="index.html">Home</a>
+        <a href="experience.html">Experience</a>
+        <a href="portfolio.html" class="active" aria-current="page">Portfolio</a>
+      </div>
+    </nav>
+  </header>
 
-      <script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
-      <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
-   </head>
-   <body>
-      <body>
-         <header class="l-header">
-            <nav class="nav bd-grid">
-               <div>
-                  <a href="#" class="nav__logo">Adam Michia</a>
-               </div>
-               <div class="nav__menu" id="nav-menu">
-                  <ul class="nav__list">
-                     <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                     <li class="nav__item"><a href="experience.html" class="nav__link">Experience</a></li>
-                     <li class="nav__item"><a href="portfolio.html" class="nav__link act">Portfolio</a></li>
-                  </ul>
-               </div>
-               <div class="nav__toggle" id="nav-toggle">
-                  <i class='bx bx-menu'></i>
-               </div>
-            </nav>
-         </header>
-         <br>
-         <!-- MAIN (Center website) -->
-         <div class="main">
-         <div class="header">
-            <h2>Portfolio</h2>
-         </div>
-         <!-- Portfolio Gallery Grid -->
-         <div class="row">
-            <div class="column">
-               <div class="content">
-                  <button class="accordion">Website Dev.</button>
-                  <div class="panel">
-                     <br>
-                     <div class="title">Bitbucket Repository</div>
-                     <p><i class="fas fa-caret-right"></i>Semesters collection of work from LIS4368: Advanced Web Applications Development.</p>
-                     <p><i class="fas fa-caret-right"></i>View readme file for full summary of work completed.</p>
-                     <div class="link"><b>Repository: </b><a href="https://bitbucket.org/mr_michia/lis4368/src/master/" target="_blank"><i class="fas fa-external-link-alt"></i></a></div>
-                     <br>
-                     <br>
-                     <hr>
+  <main>
+    <section class="hero">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+      <div class="container hero-content reveal">
+        <p class="eyebrow"><span></span> Selected work & credentials</p>
+        <h1>Building solutions at the intersection of <em>technology</em> and people.</h1>
+        <p class="hero-copy">A collection of development, data, design, and media projects—plus credentials supporting my continued growth in cloud and AI.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="button button-primary">Explore projects <i class='bx bx-down-arrow-alt'></i></a>
+          <a href="https://github.com/MrMichia" target="_blank" rel="noopener noreferrer" class="button button-ghost"><i class='bx bxl-github'></i> GitHub profile</a>
+        </div>
+        <div class="hero-stats" aria-label="Portfolio overview">
+          <div><strong>8+</strong><span>Projects</span></div>
+          <div><strong>4</strong><span>Disciplines</span></div>
+          <div><strong>2</strong><span>Credentials</span></div>
+        </div>
+      </div>
+    </section>
 
-                     
-                     <div class="title">Personal Website</div>
-                     <p><i class="fas fa-caret-right"></i>Coded from scratch <b>this</b> website (MrMichia.GitHub.io) by utilizing HTML/CSS/JavaScript.</p>
-                     <p><i class="fas fa-caret-right"></i>Hosting through GitHub Pages.</p>
-                     <p><i class="fas fa-caret-right"></i>Inspect the source code here: <a href="https://github.com/MrMichia/MrMichia.github.io" target="_blank">Link</a>.</p>
-                     <div class="link"><b>Website: </b><a href="https://mrmichia.github.io/" target="_blank"><i class="fas fa-external-link-alt"></i></a></div>
-                     <br>
-                     <br>
-                     <hr>
+    <section class="section container" id="projects">
+      <div class="section-heading reveal">
+        <div>
+          <p class="eyebrow dark"><span></span> Featured work</p>
+          <h2>Projects</h2>
+        </div>
+        <p>Academic, freelance, and personal work spanning web development, databases, user experience, and digital media.</p>
+      </div>
 
-                     
-                     <div class="title">Delonsinc.com</div>
-                     <p><i class="fas fa-caret-right"></i>Designed and implemented a fully functional website for a local construction company.</p>
-                     <p><i class="fas fa-caret-right"></i>Coded from scratch HTML elements for the content of the website.</p>
-                     <p><i class="fas fa-caret-right"></i>Website utilizes a 3rd party API to simplify the database management and hosting for the company owner.</p>
-                     <div class="link"><b>Website: </b><a href="http://www.delconsinc.com/" target="_blank"><i class="fas fa-external-link-alt"></i></a></div>
-                  </div>
-               </div>
-            </div>
+      <div class="filters reveal" role="group" aria-label="Filter projects">
+        <button class="filter active" type="button" data-filter="all">All</button>
+        <button class="filter" type="button" data-filter="development">Development</button>
+        <button class="filter" type="button" data-filter="data">Data</button>
+        <button class="filter" type="button" data-filter="design">Design & media</button>
+      </div>
 
-            <div class="column">
-               <div class="content">
-                  <button class="accordion">Database</button>
-                  <div class="panel">
-                     
-                     <br>
-                     <div class="title">Bitbucket Repository</div>
-                     <p><i class="fas fa-caret-right"></i>Semesters collection of work from LIS3781: Advanced Database Management.</p>
-                     <p><i class="fas fa-caret-right"></i>View readme file for full summary of work completed.</p>
-                     <div class="link"><b>Repository: </b><a href="https://bitbucket.org/mr_michia/lis3781/src/master/" target="_blank"><i class="fas fa-external-link-alt"></i></a></div>
-                     
-                     <br>
-                     <hr>
-                     <br>
-                     
-                     <br>
-                     
-                     <div class="title">ERD Creation Gallery</div>
-                     <p><i class="fas fa-caret-right"></i>Developed from a set of buisness rules ERD models for my Intermediate Database Managment class.</p>
-                     <p><i class="fas fa-caret-right"></i>Visualized MySQL data, sourced from a random data generator, to reflect a database design created from provided buisness rules.</p>
-                     <p><i class="fas fa-caret-right"></i>Recieved full credit for the provided assignments.</p>
-                     
-                     <br>
-                     <div class="link"><b>Link: </b><a href="https://drive.google.com/drive/folders/17yPKKR9m7AP-byfzpEs-Ni4TTcHtw2rF?usp=sharing" target="_blank"><i class="fas fa-external-link-alt"></i></a></div>
-                     <br>
-                  
-                     <!-- <a href="https://ibb.co/d6rVRbL"><img src="https://i.ibb.co/L68c3QJ/p1-erd.png" target="_blank" height="100" width="100"></a> -->
-                     
-                     Project 1:
-                     <a href="https://ibb.co/d6rVRbL" target="_blank"><img src="https://i.ibb.co/L68c3QJ/p1-erd.png" height="300" width="300"></a>
-                     
-                     <br>
-                     <hr>
-                     <br>
-                     
-                     Assignment 3:
-                     <a href="https://ibb.co/8dntnvG" target="_blank"><img src="https://i.ibb.co/LJDHDjB/A3-ERD.png" height="300" width="300"></a>
-                     
-                     <br>
-                     <hr>
-                     <br>
-                     
-                     Assignment 2:
-                     <a href="https://ibb.co/VBpC6hX" target="_blank"><img src="https://i.ibb.co/bdRvtyp/A2-ERD.png" height="300" width="300"></a>
-                     
-                     <br>
-                     <hr>
-                     <br>
-                     
-                     <br>
-                     <div class="title">Data Dictionary Gallery</div>
-                     <p><i class="fas fa-caret-right"></i>Created a set of Data Dictionaries that coordinate with each of the database ERD models provided above.</p>
-                     <p><i class="fas fa-caret-right"></i>Data provided in the Excel sheets were sourced using a random data generator.</p>
-                     <p><i class="fas fa-caret-right"></i>Recieve full credit for these assignments.</p>
-                     <div class="link"><b>Link: </b><a href="https://drive.google.com/drive/folders/1NvuuzXWd49St9mblsb5cHf7C7ozTDK9d?usp=sharing" target="_blank"><i class="fas fa-external-link-alt"></i></a></div>
-                     
-                  </div>
-               </div>
+      <div class="project-grid">
+        <article class="project-card featured reveal" data-category="development">
+          <div class="project-visual visual-site"><i class='bx bx-code-alt'></i><span>Featured</span></div>
+          <div class="project-body">
+            <div class="project-meta"><span>Web Development</span><span>HTML · CSS · JavaScript</span></div>
+            <h3>Personal Portfolio</h3>
+            <p>Designed, developed, and deployed this responsive portfolio from scratch with custom interactions and GitHub Pages hosting.</p>
+            <div class="project-links">
+              <a href="https://mrmichia.github.io/" target="_blank" rel="noopener noreferrer">Live site <i class='bx bx-link-external'></i></a>
+              <a href="https://github.com/MrMichia/MrMichia.github.io" target="_blank" rel="noopener noreferrer">Source <i class='bx bxl-github'></i></a>
             </div>
-            
-            
-            <div class="column">
-               <div class="content">
-                  <button class="accordion">Video Editing</button>
-                  <div class="panel">
-                     <br>
-                     
-                     <div class="title">FSU - What is CCI?</div>
-                     <p><i class="fas fa-caret-right"></i>With the goal of providing information to future CCI students, I created an explanatory explaining the 3 schools within FSU's College of Communication and Information.</p>
-                     <p><i class="fas fa-caret-right"></i>Created the video from scratch and collaborated with a small team to creat a cohesive script.</p>
-                     <p><i class="fas fa-caret-right"></i>Utilized iMovie and Adobe Premiere for the video editing process.</p>
-                     <iframe src="https://www.youtube.com/embed/_-EjK86FCHk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                     <br>
-                     <br>
-                     <hr>
-                     
-                     
-                     <div class="title">Drone Safety Video</div>
-                     <p><i class="fas fa-caret-right"></i>With the goal of expanding highschool students knowledge on Drone operations and precautions, me and my group produced a 3 part video series revolving around the topic of drone usage/safety/setup.</p>
-                     <p><i class="fas fa-caret-right"></i>Reponsibilities in the group included video editing and voiceover for Video 2: "Drone Etiquette & Safety".</p>
-                     <p><i class="fas fa-caret-right"></i>Utilized iMovie and Adobe Premiere for the video editing process.</p>
-                     <iframe src="https://www.youtube.com/embed/g0g8AALmhNU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                     <br>
-                     <br>
-                     <hr>
-                     <div class="title">Stem HS Video</div>
-                     <p><i class="fas fa-caret-right"></i>In an effort to better provide high school students with knowledge regarding a STEM based education/career path, I co-lead a group of 6 members where we produced a 3 part video series revolving around the topic of STEM.</p>
-                     <p><i class="fas fa-caret-right"></i>Reponsibilities in the group included video editing and voiceover for Video 1: "What is S.T.E.M.".</p>
-                     <p><i class="fas fa-caret-right"></i>Utilized iMovie and Adobe Premiere for the video editing process.</p>
-                     <iframe src="https://www.youtube.com/embed/bfae2zzElsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                  </div>
-               </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="development">
+          <div class="project-visual visual-client"><i class='bx bx-buildings'></i></div>
+          <div class="project-body">
+            <div class="project-meta"><span>Freelance</span><span>Client website</span></div>
+            <h3>Delons Construction</h3>
+            <p>Built a functional company website with custom HTML components and third-party services for simplified content management.</p>
+            <div class="project-links"><a href="http://www.delconsinc.com/" target="_blank" rel="noopener noreferrer">Visit website <i class='bx bx-link-external'></i></a></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="development">
+          <div class="project-visual visual-code"><i class='bx bx-terminal'></i></div>
+          <div class="project-body">
+            <div class="project-meta"><span>Coursework</span><span>Web applications</span></div>
+            <h3>Advanced Web Applications</h3>
+            <p>A semester collection of server-side and front-end assignments from FSU's LIS 4368 course.</p>
+            <div class="project-links"><a href="https://bitbucket.org/mr_michia/lis4368/src/master/" target="_blank" rel="noopener noreferrer">Repository <i class='bx bx-link-external'></i></a></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="data">
+          <div class="project-visual visual-data"><i class='bx bx-data'></i></div>
+          <div class="project-body">
+            <div class="project-meta"><span>Data</span><span>SQL · ERD</span></div>
+            <h3>Database Design Portfolio</h3>
+            <p>Relational database models, data dictionaries, and SQL work created from business requirements and sample datasets.</p>
+            <div class="project-links">
+              <a href="https://bitbucket.org/mr_michia/lis3781/src/master/" target="_blank" rel="noopener noreferrer">Repository <i class='bx bx-link-external'></i></a>
+              <a href="https://drive.google.com/drive/folders/17yPKKR9m7AP-byfzpEs-Ni4TTcHtw2rF?usp=sharing" target="_blank" rel="noopener noreferrer">ERD gallery <i class='bx bx-images'></i></a>
             </div>
-            <div class="column">
-               <div class="content">
-                  <button class="accordion">UX Design  </button>
-                  <div class="panel">
-                     <br>
-                     <div class="title">UX Redesign Projects</div>
-                     <p><i class="fas fa-caret-right"></i>Collaborated on developing UX centered prototypes, by redesigning various established interface's. Involved considering hypothetical users actions that might change for different tasks.</p>
-                     <p><i class="fas fa-caret-right"></i>Involved group collaboration with prototype design/consideration through Balsamic and Google collaborative softwares.</p>
-                     <div class="link"><b>UX Content Gallery: </b><a href="https://drive.google.com/drive/folders/1iGkS1EJ5mtJwGV_RAZhhcbRddjPu8zLz?usp=sharing" target="_blank"><i class="fas fa-external-link-alt"></i></a></div>
-                     <br>
-                     <br>
-                     <hr>
-                     <div class="title">Mock UI Development</div>
-                     <p><i class="fas fa-caret-right"></i>Considered a UX approach with designing a proposed interface. Involved considering hypothetical users profiles and features that might account for these users.</p>
-                     <p><i class="fas fa-caret-right"></i>Created mock interfaces for my proposed application and demonstrated functionality based on proposed user profiles.</p>
-                     <div class="link"><b>Mock UI: </b><a href="https://drive.google.com/drive/folders/1q1hwuACcmhyuryjq0S4MJpNgx4bXaCvR?usp=sharing" target="_blank"><i class="fas fa-external-link-alt"></i></a></div>
-                     <br>
-                     <br>
-                     <hr>
-                     <div class="title">Interactive Prototype</div>
-                     <p><i class="fas fa-caret-right"></i>Created an interactive prototype made using Balsamiq. Project was to create an interactive prototype to help facilitate student FSU card check-in's for campus events.</p>
-                     <div class="link"><b>Interactive Prototype: </b><a href="https://invis.io/ZH10HWMUU8PX#/447495664_1dashboard" target="_blank"><i class="fas fa-external-link-alt"></i></a></div>
-                  </div>
-               </div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="design">
+          <div class="project-visual visual-ux"><i class='bx bx-layout'></i></div>
+          <div class="project-body">
+            <div class="project-meta"><span>UX Design</span><span>Research · Prototyping</span></div>
+            <h3>Interface & Prototype Design</h3>
+            <p>User-centered redesigns, personas, task flows, mock interfaces, and an interactive campus event check-in prototype.</p>
+            <div class="project-links">
+              <a href="https://drive.google.com/drive/folders/1iGkS1EJ5mtJwGV_RAZhhcbRddjPu8zLz?usp=sharing" target="_blank" rel="noopener noreferrer">Project gallery <i class='bx bx-link-external'></i></a>
+              <a href="https://drive.google.com/drive/folders/1q1hwuACcmhyuryjq0S4MJpNgx4bXaCvR?usp=sharing" target="_blank" rel="noopener noreferrer">Prototype <i class='bx bx-pointer'></i></a>
             </div>
-            <!-- END GRID -->
-         </div>
-         <div class="cert">
-            <div class="cont">
-               <div class="tit">
-                  <h2>Certification</h2>
-               </div>
-               <img src="https://prod-discovery.edx-cdn.org/organization/logos/44022f13-20df-4666-9111-cede3e5dc5b6-2cc39992c67a.png" style="float:left";>
-               <h2>Harvard-edX: CS50x Verified Certificate</h2>
-               <div class="info">
-                  <i>"Harvard University's foundation courses to the intellectual enterprises of computer science and the art of programming."</i>
-                  <div class="link"><b>Course Info: </b><a href="https://cs50.harvard.edu/x/2020/" target="_blank" style="padding-right:5px;"><i class="fas fa-external-link-alt"></i></a></div>
-               </div>
-               <br>
-               <p><i class="fas fa-caret-right"></i>Completed 10 modules of lectures & psets, oriented around C/SQL/Python coding exercises.</p>
-               <p><i class="fas fa-caret-right"></i>Completed a final project that consisted of creating from scratch a website via which a user can register/login to a personalized account that manages a mock portfolio of real stock data queried from a 3rd party stock exchange database.</p>
-               <div class="link"><b>Official Verified Certificate: </b><a href="https://courses.edx.org/certificates/9638e64fa05d4216b55b8c21782285c3" target="_blank" style="padding-right:5px;"><i class="fas fa-external-link-alt"></i></a></div>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="design">
+          <div class="project-visual visual-video"><i class='bx bx-play-circle'></i></div>
+          <div class="project-body">
+            <div class="project-meta"><span>Digital Media</span><span>Premiere · iMovie</span></div>
+            <h3>Educational Video Series</h3>
+            <p>Scripted, edited, and narrated educational videos covering FSU's CCI program, drone safety, and STEM careers.</p>
+            <div class="project-links">
+              <a href="https://www.youtube.com/watch?v=_-EjK86FCHk" target="_blank" rel="noopener noreferrer">CCI video <i class='bx bxl-youtube'></i></a>
+              <a href="https://www.youtube.com/watch?v=g0g8AALmhNU" target="_blank" rel="noopener noreferrer">Drone safety <i class='bx bxl-youtube'></i></a>
+              <a href="https://www.youtube.com/watch?v=bfae2zzElsE" target="_blank" rel="noopener noreferrer">STEM video <i class='bx bxl-youtube'></i></a>
             </div>
-         </div>
-         <!--===== FOOTER =====-->
-         <p> . </p>
-         <hr>
-         <footer class="footer">
-            <p class="footer__title">Leave the tech stuff to me.</p>
-            <p>Stay connected below:</p>
-            <br>
-            <div class="footer__social">
-               <a href="https://www.linkedin.com/in/adam-michia/" target="_blank" class="footer__icon"><i class='bx bxl-linkedin' ></i></a>
-               <a href="https://github.com/MrMichia" target="_blank" class="footer__icon"><i class='bx bxl-github' ></i></a>
-               <a href="mailto:agm18r@my.fsu.edu" target="_blank" class="footer__icon"><i class='bx bx-envelope' ></i></a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section credentials-section" id="credentials">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="eyebrow dark"><span></span> Continued learning</p>
+            <h2>Credentials</h2>
+          </div>
+          <p>Industry and academic certifications supporting a foundation in AI, cloud technology, and computer science.</p>
+        </div>
+
+        <div class="credential-grid">
+          <article class="credential-card reveal">
+            <div class="credential-icon microsoft"><i class='bx bxl-microsoft'></i></div>
+            <div class="credential-content">
+              <p class="credential-issuer">Microsoft · Issued October 2025</p>
+              <h3>Microsoft Certified: Azure AI Fundamentals</h3>
+              <p>Foundational knowledge of machine learning, computer vision, natural language processing, generative AI, and related Azure services.</p>
+              <div class="credential-tags"><span>Azure</span><span>AI</span><span>Machine Learning</span></div>
+              <a href="https://learn.microsoft.com/api/credentials/share/en-us/AdamMichia-1249/9A3874F3178CCE28?sharingId=BCA0FE2480884ED9" target="_blank" rel="noopener noreferrer">View credential <i class='bx bx-link-external'></i></a>
             </div>
-            <p>Copyright 2021 - Adam Michia</p>
-         </footer>
-         <script>
-            /*===== MENU SHOW =====*/ 
-            const showMenu = (toggleId, navId) =>{
-            const toggle = document.getElementById(toggleId),
-            nav = document.getElementById(navId)
-            
-            if(toggle && nav){
-            toggle.addEventListener('click', ()=>{
-              nav.classList.toggle('show')
-            })
-            }
-            }
-            showMenu('nav-toggle','nav-menu')
-            
-            /*===== ACTIVE AND REMOVE MENU =====*/
-            const navLink = document.querySelectorAll('.nav__link');   
-            
-            function linkAction(){
-            /*Active link*/
-            navLink.forEach(n => n.classList.remove('active'));
-            this.classList.add('active');
-            
-            /*Remove menu mobile*/
-            const navMenu = document.getElementById('nav-menu')
-            navMenu.classList.remove('show')
-            }
-            navLink.forEach(n => n.addEventListener('click', linkAction));
-            
-              function openTab(tabName) {
-                         var i, x;
-                         x = document.getElementsByClassName("containerTab");
-                         for (i = 0; i < x.length; i++) {
-                           x[i].style.display = "none";
-                         }
-                         document.getElementById(tabName).style.display = "block";
-                       }
-                       
-                             function myFunction() {
-                             var x = document.getElementById("myTopnav");
-                             if (x.className === "topnav") {
-                             x.className += " responsive";
-                             } else {
-                             x.className = "topnav";
-                             }
-                             }
-              
-              
-              
-              	var acc = document.getElementsByClassName("accordion");
-              var i;
-              
-              for (i = 0; i < acc.length; i++) {
-                acc[i].addEventListener("click", function() {
-                  this.classList.toggle("active");
-                  var panel = this.nextElementSibling;
-                  if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                  } else {
-                    panel.style.maxHeight = panel.scrollHeight + "px";
-                  } 
-                });
-              }
-         </script>
-   </body>
+          </article>
+
+          <article class="credential-card reveal">
+            <div class="credential-icon harvard"><span>H</span></div>
+            <div class="credential-content">
+              <p class="credential-issuer">HarvardX · edX</p>
+              <h3>CS50x Verified Certificate</h3>
+              <p>Harvard University's introduction to computer science, including C, Python, SQL, algorithms, data structures, and web development.</p>
+              <div class="credential-tags"><span>C</span><span>Python</span><span>SQL</span></div>
+              <a href="https://courses.edx.org/certificates/9638e64fa05d4216b55b8c21782285c3" target="_blank" rel="noopener noreferrer">View certificate <i class='bx bx-link-external'></i></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta container reveal">
+      <div>
+        <p class="eyebrow"><span></span> Let's connect</p>
+        <h2>Interested in working together?</h2>
+        <p>Reach out to discuss technology, support engineering, or a future project.</p>
+      </div>
+      <a href="index.html#contact" class="button button-light">Start a conversation <i class='bx bx-right-arrow-alt'></i></a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="index.html" class="brand"><span class="brand-mark">AM</span><span>Adam Michia</span></a>
+      <p>&copy; <span id="year">2026</span> Adam Michia. Built with care.</p>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/adam-michia/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+        <a href="https://github.com/MrMichia" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class='bx bxl-github'></i></a>
+        <a href="mailto:adammichia@gmail.com" aria-label="Email"><i class='bx bx-envelope'></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const navMenu = document.querySelector('.nav-menu');
+    navToggle.addEventListener('click', () => {
+      const open = navMenu.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', open);
+      navToggle.querySelector('i').className = open ? 'bx bx-x' : 'bx bx-menu';
+    });
+
+    document.querySelectorAll('.filter').forEach(button => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('.filter').forEach(item => item.classList.remove('active'));
+        button.classList.add('active');
+        const filter = button.dataset.filter;
+        document.querySelectorAll('.project-card').forEach(card => {
+          card.hidden = filter !== 'all' && card.dataset.category !== filter;
+        });
+      });
+    });
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
 </html>
