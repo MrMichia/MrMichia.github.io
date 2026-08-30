@@ -278,6 +278,11 @@
 	color: #9153c9;
 }
 
+.left .icon a{
+	display: inline-flex;
+	color: inherit;
+}
+
 .left .text{
 	color: #9153c9;
 	text-transform: uppercase;
@@ -537,5 +542,130 @@ body {
 	}
 	100% {
 		background-position: 0% 50%;
+	}
+}
+
+/* Fluid desktop, tablet, and phone layout */
+.resume{
+	width: min(1100px, calc(100% - 40px));
+	align-items: stretch;
+}
+
+.left{
+	flex: 0 0 250px;
+}
+
+.right{
+	flex: 1 1 auto;
+	min-width: 0;
+}
+
+.left .img_holder img{
+	width: min(200px, 80%);
+	margin-inline: auto;
+}
+
+.header{
+	height: auto;
+	min-height: 240px;
+}
+
+.contact .li_wrap .text{
+	overflow-wrap: anywhere;
+}
+
+@media screen and (max-width: 767px){
+	body{
+		overflow-x: hidden;
+	}
+	.welcome-text{
+		padding: 5rem 1rem 1rem;
+	}
+	.resume{
+		width: min(100% - 24px, 680px);
+		margin-top: 12px;
+		flex-direction: column;
+	}
+	.left{
+		width: 100%;
+		flex-basis: auto;
+		padding: 0 clamp(1rem, 5vw, 2rem);
+	}
+	.skills ul{
+		justify-content: center;
+		gap: 12px;
+	}
+	.skills .li_wrap{
+		width: clamp(82px, 26vw, 100px);
+		height: clamp(82px, 26vw, 100px);
+		margin-bottom: 0;
+	}
+	.header{
+		min-height: 0;
+		padding: 24px clamp(1.25rem, 6vw, 2rem);
+	}
+	.header .name{
+		font-size: clamp(1.8rem, 9vw, 2.5rem);
+	}
+	.header .role{
+		font-size: clamp(1rem, 4vw, 1.25rem);
+	}
+	.header .about{
+		line-height: 1.6;
+	}
+	.right_inner{
+		padding: 28px clamp(1.1rem, 6vw, 2rem);
+	}
+	.right_inner .education{
+		margin-top: 0;
+	}
+	.resume_title,
+	.title{
+		font-size: clamp(1.05rem, 5vw, 1.5rem);
+		letter-spacing: clamp(2px, 1vw, 5px);
+	}
+	.right_inner .li_wrap{
+		flex-direction: column;
+		gap: 10px;
+		margin-bottom: 26px;
+	}
+	.right_inner .li_wrap .date{
+		width: 100%;
+		font-size: 14px;
+		font-weight: 700;
+	}
+	.right_inner .li_wrap .info{
+		width: 100%;
+		padding-left: 22px;
+	}
+	.right_inner .li_wrap .info_title{
+		letter-spacing: 1px;
+	}
+}
+
+@media screen and (max-width: 380px){
+	.resume{
+		width: calc(100% - 16px);
+	}
+	.contact .li_wrap .icon{
+		width: 42px;
+		height: 42px;
+		margin-right: 10px;
+	}
+	.contact .li_wrap .text{
+		font-size: 11px;
+	}
+	.skills .li_wrap{
+		width: 76px;
+		height: 76px;
+	}
+	.skills .li_wrap .text{
+		font-size: 11px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce){
+	body{
+		animation: none;
 	}
 }

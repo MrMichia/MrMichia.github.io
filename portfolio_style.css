@@ -171,7 +171,24 @@ button { font: inherit; }
   .project-meta span:last-child { text-align: left; }
   .project-body p { min-height: 0; }
   .credential-card { flex-direction: column; padding: 24px; }
+  .project-links { flex-direction: column; gap: 11px; }
+  .project-links a { width: 100%; }
+  .cta { margin-block: 50px; padding: 30px 22px; }
   .footer-content { flex-direction: column; text-align: center; }
+}
+
+@media (max-width: 360px) {
+  .container { width: min(100% - 20px, 1120px); }
+  .hero { min-height: 680px; }
+  .hero-content { padding-top: 125px; }
+  .hero h1 { font-size: 2.55rem; }
+  .hero-actions .button { width: 100%; }
+  .hero-stats { margin-top: 48px; }
+  .hero-stats div { padding-right: 8px; margin-right: 8px; }
+  .hero-stats strong { font-size: 22px; }
+  .hero-stats span { font-size: 9px; }
+  .section { padding-block: 64px; }
+  .project-body, .credential-card { padding: 20px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
