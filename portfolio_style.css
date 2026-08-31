@@ -55,7 +55,6 @@ button { font: inherit; }
 
 .hero {
   position: relative;
-  min-height: 760px;
   overflow: hidden;
   color: #fff;
   background: var(--navy);
@@ -64,26 +63,33 @@ button { font: inherit; }
 .hero-glow { position: absolute; border-radius: 50%; filter: blur(10px); }
 .hero-glow-one { top: 80px; right: -160px; width: 520px; height: 520px; background: radial-gradient(circle, rgba(53,109,243,.42), transparent 65%); }
 .hero-glow-two { bottom: -220px; left: -100px; width: 480px; height: 480px; background: radial-gradient(circle, rgba(124,92,231,.28), transparent 67%); }
-.hero-content { position: relative; z-index: 2; padding-top: 180px; }
+.hero-content { position: relative; z-index: 2; display: grid; grid-template-columns: minmax(0, 1.45fr) minmax(300px, .65fr); align-items: center; gap: clamp(50px, 8vw, 100px); padding-top: 132px; padding-bottom: 64px; }
+.hero-intro { min-width: 0; }
 .eyebrow { display: flex; align-items: center; gap: 10px; margin: 0 0 18px; color: #aebfe8; font-size: 12px; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; }
 .eyebrow span { width: 28px; height: 2px; background: #6d97ff; }
 .eyebrow.dark { color: var(--blue-dark); }
-.hero h1 { max-width: 900px; margin: 0; font: 700 clamp(3rem, 7vw, 5.7rem)/1.02 'Space Grotesk', sans-serif; letter-spacing: -.055em; }
+.hero h1 { max-width: 700px; margin: 0; font: 700 clamp(2.7rem, 5vw, 4.6rem)/1.02 'Space Grotesk', sans-serif; letter-spacing: -.05em; }
 .hero h1 em { color: #7ea2ff; font-style: normal; }
-.hero-copy { max-width: 680px; margin: 28px 0 0; color: #b9c2d7; font-size: 19px; }
-.hero-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 36px; }
+.hero-copy { max-width: 650px; margin: 20px 0 0; color: #b9c2d7; font-size: 17px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
 .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 50px; padding: 0 21px; border: 1px solid transparent; border-radius: 12px; font-size: 14px; font-weight: 700; transition: transform .2s, box-shadow .2s, background .2s; }
 .button:hover { transform: translateY(-2px); }
 .button-primary { color: #fff; background: var(--blue); box-shadow: 0 12px 28px rgba(53,109,243,.28); }
 .button-primary:hover { background: #4579f4; }
 .button-ghost { border-color: rgba(255,255,255,.18); color: #fff; background: rgba(255,255,255,.06); }
 .button-light { color: var(--navy); background: #fff; }
-.hero-stats { display: flex; gap: 0; margin-top: 70px; padding-bottom: 54px; }
-.hero-stats div { min-width: 145px; padding-right: 34px; margin-right: 34px; border-right: 1px solid rgba(255,255,255,.14); }
-.hero-stats div:last-child { border: 0; }
+.hero-overview { padding: 24px; border: 1px solid rgba(255,255,255,.12); border-radius: 20px; background: rgba(255,255,255,.055); box-shadow: 0 24px 60px rgba(0,0,0,.15); backdrop-filter: blur(12px); }
+.overview-heading { display: flex; align-items: center; gap: 9px; padding-bottom: 17px; border-bottom: 1px solid rgba(255,255,255,.1); color: #dce5fb; font-size: 12px; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
+.overview-heading i { color: #7ea2ff; font-size: 20px; }
+.hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; padding-block: 22px; }
+.hero-stats div { min-width: 0; }
 .hero-stats strong, .hero-stats span { display: block; }
 .hero-stats strong { font: 700 27px 'Space Grotesk', sans-serif; }
 .hero-stats span { color: #8e99b1; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+.github-link { display: flex; align-items: center; gap: 8px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.1); color: #dce5fb; font-size: 13px; font-weight: 700; }
+.github-link i:first-child { font-size: 20px; }
+.github-link i:last-child { margin-left: auto; color: #7ea2ff; }
+.github-link:hover { color: #fff; }
 
 .section { padding-block: 110px; }
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 42px; }
@@ -152,8 +158,8 @@ button { font: inherit; }
   .nav-menu a { padding: 13px; border-radius: 8px; }
   .nav-menu a:hover, .nav-menu a.active { background: rgba(255,255,255,.06); }
   .nav-menu a.active::after { display: none; }
-  .hero { min-height: 720px; }
-  .hero-content { padding-top: 150px; }
+  .hero-content { grid-template-columns: 1fr; gap: 36px; padding-top: 120px; padding-bottom: 54px; }
+  .hero-overview { max-width: 520px; }
   .section { padding-block: 80px; }
   .section-heading { align-items: start; flex-direction: column; gap: 20px; }
   .project-grid, .credential-grid { grid-template-columns: 1fr; }
@@ -162,9 +168,16 @@ button { font: inherit; }
 
 @media (max-width: 520px) {
   .container { width: min(100% - 28px, 1120px); }
-  .hero h1 { font-size: 3.1rem; }
-  .hero-copy { font-size: 16px; }
-  .hero-stats div { min-width: 0; flex: 1; padding-right: 14px; margin-right: 14px; }
+  .hero-content { gap: 22px; padding-top: 100px; padding-bottom: 32px; }
+  .hero h1 { font-size: clamp(2.3rem, 11vw, 2.85rem); }
+  .hero-copy { margin-top: 14px; font-size: 15px; }
+  .hero-actions { gap: 8px; margin-top: 20px; }
+  .hero-actions .button { min-height: 46px; padding-inline: 16px; }
+  .hero-overview { max-width: none; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; backdrop-filter: none; }
+  .overview-heading, .github-link { display: none; }
+  .hero-stats { padding: 18px 0 0; border-top: 1px solid rgba(255,255,255,.12); }
+  .hero-stats strong { font-size: 24px; }
+  .hero-stats span { font-size: 10px; }
   .project-visual { height: 175px; }
   .project-body { padding: 23px; }
   .project-meta { flex-direction: column; gap: 3px; }
@@ -179,12 +192,9 @@ button { font: inherit; }
 
 @media (max-width: 360px) {
   .container { width: min(100% - 20px, 1120px); }
-  .hero { min-height: 680px; }
-  .hero-content { padding-top: 125px; }
-  .hero h1 { font-size: 2.55rem; }
+  .hero-content { padding-top: 94px; }
+  .hero h1 { font-size: 2.35rem; }
   .hero-actions .button { width: 100%; }
-  .hero-stats { margin-top: 48px; }
-  .hero-stats div { padding-right: 8px; margin-right: 8px; }
   .hero-stats strong { font-size: 22px; }
   .hero-stats span { font-size: 9px; }
   .section { padding-block: 64px; }
