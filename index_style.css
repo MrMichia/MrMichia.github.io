@@ -779,9 +779,9 @@ body {
   grid-row: 1 / 3;
   align-self: center;
   justify-self: end;
-  width: auto;
+  width: min(40vw, 440px);
   max-width: 100%;
-  height: min(720px, calc(100svh - 6.5rem));
+  height: auto;
   aspect-ratio: 427 / 640;
   margin-top: 2.5rem;
   min-height: 0;
@@ -790,7 +790,8 @@ body {
 
 .home__img img{
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 427 / 640;
   object-fit: contain;
   object-position: center;
   border-radius: 0;
